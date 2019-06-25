@@ -1,3 +1,4 @@
 # vi/vim swap file
 *.swp
 *.swo
+.vagrant/

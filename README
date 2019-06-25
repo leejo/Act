@@ -34,3 +34,19 @@ help of Apache, mod_perl and Template-Toolkit.
 More documentation is available in pod, under lib/Act/Manual/.
 All the documentation is also mirrored on http://act.mongueurs.net/
 
+--------------------------------------------------------------------------
+
+To build a development box you will need VirtualBox and Vagrant.
+
+git clone this repo then build the box that also install all necessary dependencies:
+
+    VAGRANT_VAGRANTFILE=box-builder/Vagrantfile vagrant up
+    VAGRANT_VAGRANTFILE=box-builder/Vagrantfile vagrant halt
+    vagrant up --provision
+
+This make take around 30 minutes or so. Once the above is done you can:
+
+    vagrant ssh
+    cd act
+    perl Makefile.PL
+    make test
